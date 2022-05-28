@@ -1,0 +1,15 @@
+name: Build and Deploy
+
+on:
+  push:
+    paths:
+      - "**"
+      - ".gitignore"
+      - "!README.md"
+
+jobs:
+  cicd:
+    uses: elgunmaqsudzade/actions/.github/workflows/workflow.yml@042c40fe81900a39500ef65d8a0413b21391dc74
+    with:
+      app_name: docker-cicd
+
